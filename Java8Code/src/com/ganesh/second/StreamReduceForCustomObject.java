@@ -26,6 +26,18 @@ public class StreamReduceForCustomObject {
 			 
 			System.out.println(totalSalarys);//58000.0
 			
+			System.out.println("======Stream Reduce Array Objects=====");
+			
+			
+			Developer[] dv = new Developer[] {
+					  new Developer("Ganesh", 18000),
+			          new Developer("Shashi", 15000),
+			          new Developer("Alock", 25000)
+			};
+			
+		Double results = Arrays.asList(dv).stream().reduce(0.0,(salTotal, sal) -> salTotal + sal.getSalary(), Double::sum);
+		
+			System.out.println(results);//58000.0
 
 	}
 	
