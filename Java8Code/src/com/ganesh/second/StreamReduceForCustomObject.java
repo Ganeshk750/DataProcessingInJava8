@@ -17,6 +17,15 @@ public class StreamReduceForCustomObject {
                         -> partialTotalSalaries + e.getSalary(), Double::sum);
 		
 		System.out.println(totalSalary);//58000.0
+		
+		System.out.println("===========ParallelStream()=============");
+		
+		Double totalSalarys = list.parallelStream()
+			    .reduce(0.0, (partialTotalSalaries, e) 
+			            -> partialTotalSalaries + e.getSalary(), Double::sum);
+			 
+			System.out.println(totalSalarys);//58000.0
+			
 
 	}
 	
