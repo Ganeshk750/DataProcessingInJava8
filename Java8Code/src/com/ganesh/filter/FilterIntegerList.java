@@ -11,6 +11,9 @@ public class FilterIntegerList {
 		for(Integer i: intList) {
 			if(i % 2 == 0) {
 				System.out.println(i);
+				/*
+				 * 2 4 10 16
+				 */
 			}
 		}
 		
