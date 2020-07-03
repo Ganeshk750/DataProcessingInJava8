@@ -1,6 +1,7 @@
 package com.ganesh.filter;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class CustomObjectList {
@@ -22,6 +23,16 @@ public class CustomObjectList {
 //		        Customer [id=1, name=Jack, age=23]
 //				Customer [id=2, name=Mary, age=31]
 //				Customer [id=5, name=Joe, age=19]
+		
+		System.out.println("============Using filter stream with sorted()===================");
+		customers.stream().filter(cust -> cust.getAge() >=18)
+		                                .sorted(Comparator.comparing(Customer::getAge))
+		                                .forEach(System.out::println);
+		
+//		        Customer [id=5, name=Joe, age=19]
+//				Customer [id=1, name=Jack, age=23]
+//				Customer [id=2, name=Mary, age=31]
+
 	}                                             
 	
 	public static class Customer{
