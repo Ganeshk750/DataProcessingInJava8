@@ -3,6 +3,7 @@ package com.ganesh.faltmap;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FlatMapForIntegrList {
 	
@@ -21,7 +22,7 @@ public class FlatMapForIntegrList {
 	   List<Integer> list = listOfList.stream()
 			                   .flatMap(newList -> newList.stream())
 			                   .collect(Collectors.toList());
-	   
+	  
 	   System.out.println(list);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 	   
 	}

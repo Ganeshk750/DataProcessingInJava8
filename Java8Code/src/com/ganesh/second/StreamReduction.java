@@ -7,7 +7,7 @@ import java.util.OptionalInt;
 
 /*average, sum, min, max, and count.
  * Apply Stream Reduction on Java List, Array*/
-public class StreamReduce {
+public class StreamReduction {
 	
 	public static void main(String[] args) {
 		
