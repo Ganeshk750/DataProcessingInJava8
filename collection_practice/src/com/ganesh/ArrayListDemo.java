@@ -1,7 +1,7 @@
 package com.ganesh;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 
 public class ArrayListDemo {
   public static void main(String[] args) {
@@ -23,5 +23,6 @@ public class ArrayListDemo {
 			//  [A, 10, null]
 			//  [A, 10, M, null, N]
 	  
+	   
    }
 }
