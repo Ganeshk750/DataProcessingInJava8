@@ -1,6 +1,6 @@
 package com.lang.pkg;
 
-public class EqualsTest {
+public class EqualsTest implements Cloneable {
 	
 	String name;
 	int rollNo;
