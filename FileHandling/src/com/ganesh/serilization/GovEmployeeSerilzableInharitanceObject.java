@@ -13,6 +13,8 @@ public class GovEmployeeSerilzableInharitanceObject {
 		emp.setAddress("BLR");
 		emp.setCategory("BIS");
 		emp.setDepartment("DEV");
+		Address address = new Address("BLR", "Karnataka");
+		emp.setAddress(address);
 		System.out.println("Actual Employee: "+ emp);
 		
 		File file = new File("inher.ser");

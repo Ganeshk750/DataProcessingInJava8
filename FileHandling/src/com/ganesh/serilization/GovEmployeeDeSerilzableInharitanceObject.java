@@ -15,5 +15,6 @@ public class GovEmployeeDeSerilzableInharitanceObject {
 	}
 	
 	//Actual Employee: GovEmployee [areaOfExperience=ECE, rating=3.5 Employee [id=101, name=Ganesh, address=BLR, category=BIS , department=DEV]]
+    //DeSerilized Emp: GovEmployee [areaOfExperience=ECE, rating=3.5,Employee [id=101, name=Ganesh, address=BLR, category=null , department=null]]
 
 }
