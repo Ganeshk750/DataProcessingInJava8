@@ -12,6 +12,8 @@ public class GovEmployeeDeSerilzableInharitanceObject {
        ObjectInputStream ois = new ObjectInputStream(fis);
        GovEmployee emp = (GovEmployee)ois.readObject();
        System.out.println("DeSerilized Emp: "+ emp);
+       fis.close();
+       ois.close();
 	}
 	
 	//Actual Employee: GovEmployee [areaOfExperience=ECE, rating=3.5 Employee [id=101, name=Ganesh, address=BLR, category=BIS , department=DEV]]

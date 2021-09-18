@@ -22,5 +22,8 @@ public class GovEmployeeSerilzableInharitanceObject {
 		ObjectOutputStream oo = new ObjectOutputStream(fis);
 		oo.writeObject(emp);
 		
+		fis.close();
+		oo.close();
+		
 	}
 }

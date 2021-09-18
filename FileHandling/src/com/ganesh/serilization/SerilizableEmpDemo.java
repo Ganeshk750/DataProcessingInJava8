@@ -27,6 +27,8 @@ public class SerilizableEmpDemo {
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(emp);
 		System.out.println("Serilized Emp: " + emp);
+		fos.close();
+		oos.close();
 
 	}
 

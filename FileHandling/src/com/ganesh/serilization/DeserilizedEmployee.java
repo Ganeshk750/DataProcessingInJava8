@@ -16,6 +16,8 @@ public class DeserilizedEmployee {
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Employee dEmp = (Employee) ois.readObject();
 		System.out.println("Deserilized Emp: " + dEmp);
+		fis.close();
+		ois.close();
 		//Deserilized Emp: Employee [id=101, name=Ganesh, address=BLR, category=null , department=null]
 		//Serilized Emp: Employee [id=101, name=Ganesh, address=BLR, category=BIS , department=DEV]
 	}
