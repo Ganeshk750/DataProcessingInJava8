@@ -1,5 +1,8 @@
 package com.ganesh.serilization;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
@@ -73,6 +76,20 @@ public class Employee implements Serializable {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", category=" + category
 				+ ", listOfTask=" + listOfTask + ", scores=" + Arrays.toString(scores) + "]";
 	}
+	
+	
+	 private void writeObject(ObjectOutputStream oos) throws IOException {
+	        System.out.println("custom serialization!!");
+	        if(getAddress().equals("BLR")){
+	            setAddress("Bangalore, India");
+	        }
+	        oos.defaultWriteObject();
+	    }
+
+	    private void readObject(ObjectInputStream iis) throws IOException, ClassNotFoundException {
+	        System.out.println("custom Deserialization!!");
+	        iis.defaultReadObject();
+	    }
 	
 	
 	
