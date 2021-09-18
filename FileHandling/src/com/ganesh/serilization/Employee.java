@@ -1,10 +1,33 @@
 package com.ganesh.serilization;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	private int id;
 	private String name;
 	private String address;
+	private static String department;
+	private transient String category;
+	
+	
+	public static String getDepartment() {
+		return department;
+	}
+	public static void setDepartment(String department) {
+		Employee.department = department;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
 	public int getId() {
 		return id;
 	}
@@ -23,11 +46,12 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", category=" + category + " +  department=" + department + "]";
 	}
+	
+	
 	
 	
 
